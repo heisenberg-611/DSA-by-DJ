@@ -1,7 +1,16 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src"
+    ],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+    "java.project.referencedLibraries": [],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.trace.server": "off",
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/.git": true,
+        "**/target": true,
+        "**/bin": true
+    },
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml"
 }
