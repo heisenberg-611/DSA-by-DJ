@@ -7,7 +7,11 @@ public class LinkedListUtilsOOP {
     public Node tail = null;
     public int size = 0;
 
-    public void createList(Object[] arr) { // Time complexity O(n)
+    public void createList(Object[] arr) {// Time complexity O(n)
+        if (arr == null || arr.length == 0) {
+            head = null;
+            return;
+        }
         head = new Node(arr[0]);
         Node n = head;
         for (int i = 1; i < arr.length; i++) {
@@ -165,4 +169,4 @@ public class LinkedListUtilsOOP {
         }
         head = prev;
     }
-}
+    }
