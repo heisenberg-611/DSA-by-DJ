@@ -1,4 +1,4 @@
-package problems.LinkedList.SWG;
+package problems.Array.SWG;
 
 public class saddlePoints {
     public static int saddlePoint(int[][] matrix) {
