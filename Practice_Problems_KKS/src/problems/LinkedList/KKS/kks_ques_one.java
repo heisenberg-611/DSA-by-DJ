@@ -1,4 +1,4 @@
-package problems.LinkedList;
+package problems.LinkedList.KKS;
 
 import node.Node;
 import utils.LinkedListUtilsOOP;
@@ -20,6 +20,8 @@ public class kks_ques_one {
     public static void main(String[] args) {
         LinkedListUtilsOOP ll = new LinkedListUtilsOOP();
         ll.createList(new Object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
-        ll.display();
+        ll.displayinStyle();
+        ll.head = moveLastToFirst(ll.head);
+        ll.displayinStyle();
     }
 }

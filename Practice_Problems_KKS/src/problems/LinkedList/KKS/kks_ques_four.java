@@ -1,4 +1,4 @@
-package problems.LinkedList;
+package problems.LinkedList.KKS;
 
 public class kks_ques_four {
     

@@ -3,9 +3,9 @@ package utils;
 import node.Node;
 
 public class LinkedListUtilsOOP {
-    Node head = null;
-    Node tail = null;
-    int size = 0;
+    public Node head = null;
+    public Node tail = null;
+    public int size = 0;
 
     public void createList(Object[] arr) { // Time complexity O(n)
         head = new Node(arr[0]);
@@ -15,6 +15,31 @@ public class LinkedListUtilsOOP {
             n.next = newNode;
             n = n.next;
         }
+    }
+
+    public Node reverseNodeOutplace(){
+        Node prev = null;
+        Node temp = head;
+        while (temp != null) {
+            Node n = new Node(temp.data);
+            n.next = prev;
+            prev = n;
+            temp = temp.next;
+        }
+        return prev;
+    }
+
+    public void reverseNodeInplace() {
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        this.head = prev;
     }
 
     public void insertAtEnd(int data) { //Time complexity O(1)
@@ -48,13 +73,23 @@ public class LinkedListUtilsOOP {
         }
         System.out.println();
     }
+
+    public void displayinStyle() {
+        Node n = head;
+        while (n!=null){
+            if (n.next !=null)
+                System.out.print(n.data+" -> ");
+            else
+                System.out.println(n.data);
+            n = n.next;
+        }
+    }
     public int size() { //Time complexity O(n)
-//            int size = 0;
-//            Node temp = head;
-//            while (temp != null) {
-//                size++;
-//                temp = temp.next;
-//            }
+           Node temp = head;
+           while (temp != null) {
+               size++;
+               temp = temp.next;
+           }
         return size;
     }
     public void insertAt(int index, int data) { //Time complexity O(n) Space Complexity O(1)
@@ -106,5 +141,28 @@ public class LinkedListUtilsOOP {
             tail = temp;
             size--;
         }
+    }
+    public Node nodeAt(int index) {
+        int count = 0;
+        while (head != null) {
+            if (count == index) {
+                return head;
+            }
+            count++;
+            head = head.next;
+        }
+        return head;
+    }
+    public void reverseList(){
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
     }
 }
