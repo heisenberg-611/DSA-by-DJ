@@ -1,8 +1,8 @@
 package node;
 
 public class DHDCL {
-    Node dh;
-    Node tail;
+    public Node dh;
+    public Node tail;
 
     public DHDCL() {
         Node newNode = new Node(-99);
