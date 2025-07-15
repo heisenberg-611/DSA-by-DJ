@@ -7,19 +7,22 @@ public class Node {
     public Node next;
     public Node prev;
 
-    public Node(Object data) {
+    // Constructor for linked list (data only)
+    public Node(Object data) { // for singly and doubly linked list
         this.data = data;
         this.next = null;
         this.prev = null;
     }
-    public Node(Object data, Node next) {
+    // Constructor for linked lists (data + next node)
+    public Node(Object data, Node next) { // for singly linked list
         this.data = data;
         this.next = next;
     }
-    public Node(Object key, Object data) {
+
+    // Constructor for hash table (key + data)
+    public Node(Object key, Object data) { // for hash table
         this.key = key;
         this.data = data;
         this.next = null;
-        this.prev = null;
     }
 }

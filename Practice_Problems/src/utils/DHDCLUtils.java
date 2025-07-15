@@ -3,23 +3,16 @@ package utils;
 import node.Node;
 
 public class DHDCLUtils {
-    public Node dh;   // Dummy head
+    public Node dh; // Dummy head
     public Node tail; // Last node
 
     // Constructor: initializes empty list
     public DHDCLUtils() {
-        Node n = new Node(-99); // Dummy node
+        Node n = new Node(null); // Dummy node
         dh = n;
         dh.next = dh;
         dh.prev = dh;
         tail = n;
-    }
-    
-    public Node getDummy(){
-        return dh;
-    }
-    public Node getHead() {
-        return dh.next;
     }
 
     // Create list from array
@@ -155,5 +148,13 @@ public class DHDCLUtils {
             current = current.prev;
         }
         System.out.println();
+    }
+
+    public Node getDummy() {
+        return dh;
+    }
+
+    public Node getHead() {
+        return dh.next;
     }
 }
