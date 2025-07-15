@@ -5,7 +5,7 @@ public class DHDCL {
     public Node tail;
 
     public DHDCL() {
-        Node newNode = new Node(-99);
+        Node newNode = new Node(null);
         dh = newNode;
         tail = dh;
         dh.next = dh;
