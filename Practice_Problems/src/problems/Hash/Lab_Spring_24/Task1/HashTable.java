@@ -64,17 +64,51 @@ public class HashTable {
 	//you need to COMPLETE this method
     private int hashFunction( String key ){
         // TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        return -1; //remove this line
+        int sum = 0;
+        int len = key.length();
+        if(len % 2 != 0){ 
+            key += "N";
+            len = key.length();
+        }
+        for (int i = 0; i < len; i+=2) {
+            char c1 = key.charAt(i);
+            char c2 = key.charAt(i+1);
+            int ascii1 = (int) c1;
+            int ascii2 = (int) c2;
+            int finalL = Integer.parseInt(""+ascii1+ascii2);
+            sum += finalL;
+        }
+        return sum % ht.length;
     }
 
 
 	//you need to COMPLETE this method
     //Hint: you may need to use Integer.parseInt() to convert from String to Integer
-    public String searchHashtable( Object[] keyValuePair ){
-        // TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // public String searchHashtable( Object[] keyValuePair ){
+    //     // TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        //it'll return either "Found" or "Not Found"
-        return null; // remove this line
+    //     //it'll return either "Found" or "Not Found"
+    //     return null; // remove this line
+    // }
+    public String searchHashtable(Object[] keyValuePair) {
+    String key = (String) keyValuePair[0];
+    int index = hashFunction(key);
+    int startIndex = index;
+
+    while (ht[index] != null) {
+        if (ht[index].key.equals(key)) {
+            return "Found";
+        }
+
+        index = (index + 1) % ht.length;
+
+        if (index == startIndex) {
+            break; // full loop, key not found
+        }
     }
+
+    return "Not Found";
+}
+
 
 }
