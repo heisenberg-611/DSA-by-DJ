@@ -114,50 +114,49 @@ public class ArrayUtils {
     }
 
     // Main method to test the utility class
-    public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 0, 0};
-        int currentSize = 5;
+    // public static void main(String[] args) {
+    //     int[] array = {1, 2, 3, 4, 5, 0, 0};
+    //     int currentSize = 5;
 
-        System.out.print("Original array: ");
-        iterate(array);
+    //     System.out.print("Original array: ");
+    //     iterate(array);
 
-        System.out.print("Resized array: ");
-        iterate(resize(array, 8));
+    //     System.out.print("Resized array: ");
+    //     iterate(resize(array, 8));
 
-        System.out.print("Copied array: ");
-        iterate(copyArray(array));
+    //     System.out.print("Copied array: ");
+    //     iterate(copyArray(array));
 
-        System.out.print("Shift left: ");
-        shiftLeft(array);
-        iterate(array);
+    //     System.out.print("Shift left: ");
+    //     shiftLeft(array);
+    //     iterate(array);
 
-        System.out.print("Shift right: ");
-        shiftRight(array);
-        iterate(array);
+    //     System.out.print("Shift right: ");
+    //     shiftRight(array);
+    //     iterate(array);
 
-        System.out.print("Rotate left: ");
-        rotateLeft(array);
-        iterate(array);
+    //     System.out.print("Rotate left: ");
+    //     rotateLeft(array);
+    //     iterate(array);
 
-        System.out.print("Rotate right: ");
-        rotateRight(array);
-        iterate(array);
+    //     System.out.print("Rotate right: ");
+    //     rotateRight(array);
+    //     iterate(array);
 
-        System.out.print("Reversed out-of-place: ");
-        iterate(reverseOutOfPlace(array));
+    //     System.out.print("Reversed out-of-place: ");
+    //     iterate(reverseOutOfPlace(array));
 
-        reverseInPlace(array);
-        System.out.print("Reversed in-place: ");
-        iterate(array);
+    //     reverseInPlace(array);
+    //     System.out.print("Reversed in-place: ");
+    //     iterate(array);
 
-        System.out.print("After insertion: ");
-        array = insert(array, 2, 10, currentSize);
-        currentSize++;
-        iterate(array);
+    //     System.out.print("After insertion: ");
+    //     array = insert(array, 2, 10, currentSize);
+    //     currentSize++;
+    //     iterate(array);
 
-        System.out.print("After deletion: ");
-        delete(array, 2, currentSize);
-        currentSize--;
-        iterate(array);
-    }
+    //     System.out.print("After deletion: ");
+    //     delete(array, 2, currentSize);
+    //     currentSize--;
+    //     iterate(array);
 }
