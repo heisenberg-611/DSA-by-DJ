@@ -9,7 +9,6 @@ public class HashUtils{
 
     public HashUtils(int size) {
         this.hashTable = new Node[size];
-        this.size = 0;
     }
 
     public int hashfunc(Object key){
