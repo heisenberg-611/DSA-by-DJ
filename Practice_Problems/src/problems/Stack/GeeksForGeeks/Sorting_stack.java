@@ -5,7 +5,7 @@ public class Sorting_stack {
     public static Stack sortStack(Stack stack) {
         Stack tmpStack = new Stack();
         
-       while(!stack.isEmpty())
+        while(!stack.isEmpty())
         {
             // pop out the first element
             int tmp = (int)stack.pop();
