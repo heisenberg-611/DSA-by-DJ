@@ -14,7 +14,7 @@ public class Node {
         this.prev = null;
     }
     // Constructor for linked lists (data + next node)
-    public Node(Object data, Node next) { // for singly linked list
+    public Node(Object data, Node next) { // for singly linked list and stack
         this.data = data;
         this.next = next;
     }
