@@ -22,7 +22,10 @@ public class Sorting_stack {
             // push temp in temporary of stack
             tmpStack.push(tmp);
         }
-        return tmpStack;
+        while(!tmpStack.isEmpty()){
+            stack.push(tmpStack.pop());
+        }
+        return stack;
     }
 
     public static void main(String[] args) {
