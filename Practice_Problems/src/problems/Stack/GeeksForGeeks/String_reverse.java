@@ -14,7 +14,7 @@ public class String_reverse {
         return res.toString();
     }
     public static void main(String[] args) {
-        String s = "GeeksforGeeks";
+        String s = "Geeks for Geeks";
         System.out.println("Original String: " + s);
         String reversed = reverse(s);
         System.out.println("Reversed String: " + reversed);
