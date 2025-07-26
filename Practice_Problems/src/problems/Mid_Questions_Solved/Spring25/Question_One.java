@@ -6,7 +6,7 @@ public class Question_One {
             int target = combination[col], rowIndex = 0;
             while (matrix[rowIndex][col] != target) rowIndex++;
 
-            int up = (rowIndex - 4 + 9) % 9;    // ⬅️ changed 3 ➝ 4
+            int up = (rowIndex - 4 + 9) % 9; 
             int down = (4 - rowIndex + 9) % 9;
 
             int steps = Math.min(up, down);
