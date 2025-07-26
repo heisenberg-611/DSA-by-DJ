@@ -3,8 +3,8 @@ package utils;
 import node.Node;
 
 public class HashUtils{
-    Node[] hashTable;
-    private int size = 0;
+    public Node[] hashTable;
+    public int size = 0;
     private static final double LOAD_FACTOR = 0.75;
 
     public HashUtils(int size) {
