@@ -19,7 +19,7 @@ public class Implementation_tester {
 
         bst.display();
         System.out.println();
-        bst.remove(15);
+        bst.remove(1);
         bst.display();
     }
 }

@@ -3,6 +3,12 @@ package utils;
 import node.TreeNode;
 
 public class BinarySearchTree {
+    //Binary Search Tree = A tree data structure, where each node is greater than its left child,
+    //                     but less than its right.
+    //                     Benefit: Easy to locate a node when they are in order
+    //                     Time complexity: best case O(log n)
+    //                                      worst case O(n)
+    //                     Space complexity: O(n)
     TreeNode root;
 
     public void insert(TreeNode node) {
@@ -90,4 +96,10 @@ public class BinarySearchTree {
         }
         return root.data;
     }
+
+    //DFS
+    public void inorderTraversal(TreeNode root){
+
+    }
 }
+ 
