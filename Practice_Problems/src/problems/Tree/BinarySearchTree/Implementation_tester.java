@@ -7,23 +7,19 @@ public class Implementation_tester {
 
     BinarySearchTree bst = new BinarySearchTree();  
 
-        bst.insert(new  BTNode(10));
-        bst.insert(new  BTNode(8));
-        bst.insert(new  BTNode(9));
-        bst.insert(new  BTNode(11));
-        bst.insert(new  BTNode(12));
-        bst.insert(new  BTNode(12));
-        bst.insert(new  BTNode(13));
-        bst.insert(new  BTNode(4));
-        bst.insert(new  BTNode(3));
-        bst.insert(new  BTNode(2));
-        bst.insert(new  BTNode(1));
-
-
+        bst.insert(new BTNode(10));
+        bst.insert(new BTNode(5));
+        bst.insert(new BTNode(15));
+        bst.insert(new BTNode(2));
+        bst.insert(new BTNode(7));
+        bst.insert(new BTNode(12));
+        bst.insert(new BTNode(17));
+        
         // bst.display();
         // System.out.println();
         // bst.remove(1);
         BTPrinter.inOrderPrint(bst.getRoot());
         BTPrinter.printNode(bst.getRoot());
+        System.out.print(bst.isBalanced());
     }
 }

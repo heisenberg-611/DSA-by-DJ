@@ -90,7 +90,7 @@ public class BinarySearchTree {
         if (root.right == null)
             throw new IllegalArgumentException("No right subtree to find successor.");
         root = root.right;
-        while (root.left != null) {
+        while (root.left != null ) {
             root = root.left;
         }
         return root.elem;
@@ -134,7 +134,19 @@ public class BinarySearchTree {
         System.out.print(root.elem+" ");
     }
 
-    
+    public boolean isBalanced() {
+        return checkHeight(root) != -1;
+    }
+
+    private int checkHeight(BTNode node) {
+        if (node == null) return 0;
+        int left = checkHeight(node.left);
+        if (left == -1) return -1;
+        int right = checkHeight(node.right);
+        if (right == -1) return -1;
+        if (Math.abs(left - right) > 1) return -1;
+        return Math.max(left, right) + 1;
+    }
 
     public BTNode getRoot(){
         return root;
