@@ -12,5 +12,6 @@
         "**/target": true,
         "**/bin": true
     },
-    "java.configuration.maven.userSettings": "~/.m2/settings.xml"
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml",
+    "codium.codeCompletion.enable": true
 }
