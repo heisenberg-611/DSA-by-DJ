@@ -106,6 +106,13 @@ public class BinarySearchTree {
         return root.elem;
     }
 
+    public int LowestSWG(BTNode root){
+        if(root.left != null){
+            return LowestSWG(root.left);
+        }
+        return root.elem;
+    }
+
     // DFS
     public void preOrderTraversal(BTNode root) {
         if(root == null){
